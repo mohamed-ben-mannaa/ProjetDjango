@@ -1,0 +1,19 @@
+{% extends 'magasin/base.html' %}
+{% block title %} {{Membre.nom}} {% endblock %}
+
+{% block content %}
+  <div class="shadow" style="width: 400px;margin: 10px; " >
+   <div class="card-body">
+       <h5 class="card-title">Membre</h5>
+       <hr class="dropdown-divider">
+       <img src="/media/{{Membre.logo}}" style="width: 350px; height: 300px;">
+       <hr class="dropdown-divider">
+        <p class="card-text">Nom: <b>{{Membre.nom}}</b></p>
+       <p class="card-text">Adresse: <b>{{Membre.adresse}}</b></p>
+       <p class="card-text">Email: {{Membre.email}}</p>
+       <p class="card-text">Tel: {{Membre.telephone}}</p>
+       <a href="{% url 'Membres' %}" class="btn btn-secondary">Retour au Membres</a>
+   </div>
+</div>
+<br><br><b><br><br><br><br><br><br></b>
+{% endblock %}

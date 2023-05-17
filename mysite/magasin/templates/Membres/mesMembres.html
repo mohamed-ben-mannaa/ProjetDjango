@@ -1,0 +1,40 @@
+{% extends 'magasin/base.html' %}
+{% block title %} Membres {% endblock %}
+{% block content %}
+<!-- body -->
+<div class="container-fluid mt-5" style="display: inline-block;width: 100%; margin-bottom: 500px;">
+    <button type="submit" class="btn btn-danger"><a href="{% url 'nouvMembre' %}" class="text-white" style="text-decoration: none;">Add membre </a></button>
+    <div class="row-9">
+        <!-- all products -->
+        <div id='Membre' class="col-lg-9 mx-auto">
+            <div class="row mx-auto">
+                {% for Membre in Membres %}
+                <div class="shadow" id={{Membre.id}} style="width:420px;border:black solid 1px;margin:25px;display: flex;">
+                    <div id={{Membre.id}} style="margin:5px;">
+                        <img src="/media/{{Membre.logo}}" style="width: 250px; height: 250px; padding: 5px; margin-left: 60px;">
+                        <div>
+                            <hr class="dropdown-divider">
+                            <div class="card-body">
+
+                                <p class="card-text">Nom: <b>{{Membre.nom}}</b></p>
+                                <div style="width: 350px;">
+                                    <a href="{% url 'detail_Membre' for_id=Membre.id %}"
+                                        class="btn btn-primary">Voir détails</a>
+                                    {% if user.is_authenticated %}
+                                    <a href="{% url 'edit_Membre' Membre.id %}"
+                                        class="btn btn-success">Modifier</a>
+                                    <a href="{% url 'delete_Membre' Membre.id %}"
+                                        class="btn btn-danger">Supprimer</a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br>
+{% endblock %}

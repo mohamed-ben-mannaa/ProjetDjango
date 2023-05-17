@@ -1,0 +1,15 @@
+{% extends 'magasin/base.html' %}
+{% block title %} Supprimer une Project {% endblock %}
+
+{% block content %}
+<div class="container mt-3">
+  <h2>Supprimer un Project</h2>
+  <p>Êtes-vous sûr de vouloir supprimer ce Project ?</p>
+  <p>{{ Project.libellé }}</p>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Supprimer</button>
+    <a href="{% url 'ListProject' %}" class="btn btn-secondary">Annuler</a>
+  </form>
+</div>
+{% endblock %}

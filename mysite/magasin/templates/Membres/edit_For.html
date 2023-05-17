@@ -1,0 +1,17 @@
+{% extends 'magasin/base.html' %}
+{% block title %} Modifier Membre {% endblock %}
+{% block content %}
+<!-- body -->
+<div class="container-fluid mt-3 shadow" style="margin-top: 20px;width: 750px;">
+    <div class="row-9">
+        <div class="col-lg-6 mx-auto">
+            <form  method='POST' style="margin-bottom: 30px;" class="post-form" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Modifier</button>
+            </form>
+        </div>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+{% endblock %}

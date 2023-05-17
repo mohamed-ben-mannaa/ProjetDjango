@@ -1,0 +1,77 @@
+{% extends 'magasin/base.html' %} {% block content %}
+<!-- remove the <img> tag -->
+{% endblock %} 
+ {% block banner-slider %}
+    <div style="margin-bottom: 20px;" id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/static/images/ban1.jpg" class="d-block w-100" alt="First slide">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </a>
+    </div>
+  {% endblock banner-slider %}
+  {% block information %}
+
+  <div class="container" style="background-color: white;">
+    <div style="background-color: #5286ED;" class="row  text-center p-5 text-white border-bottom  ">
+        <h1>Our objective</h1>
+        <small class="fs-5">The objectives of an e-commerce website are to drive online sales, attract visitors, provide a seamless shopping experience, build trust, personalize customer interactions, expand the customer base, and optimize operational efficiency. By implementing effective marketing strategies, user-friendly interfaces, secure payment options, and personalized recommendations, e-commerce websites aim to increase conversions, customer satisfaction, and repeat purchases. They also strive to reach a wider audience through targeted marketing campaigns and expand into new markets. Additionally, optimizing operational processes and inventory management helps reduce costs and enhance overall efficiency. Ultimately, the objective is to maximize revenue and establish a successful online presence.</small>
+    </div>
+  </div>
+  <div class=" row " style=" margin-bottom: 60px;display: flex; background-color: white; width: 75%;">
+ <h1 style="text-align: center;margin-top: 30px;margin-bottom: 30px;">Our Advantages</h1>
+<div class="col-md-4 col-sm-3 mi-go wow fadeInup bg-white" data-wow-duration="1s" data-wow-dealy="0.6s" 
+style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+<div class="goodnesssec buttermilk smgb">
+    <a href="#">
+        <div class="goodnessseccont text-center">
+            <img src="/static/images/livraison.png" class="img-responsive " alt="">
+            <p class="mlkpro" style="margin-top: 40px;">Livraison rapide</p>
+        </div>
+    </a>
+</div>
+   
+</div>
+<div class="col-md-4 col-sm-3 mi-go wow fadeInup bg-white" data-wow-duration="1s" data-wow-dealy="0.6s" 
+style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+<div class="goodnesssec buttermilk smgb">
+    <a href="#">
+        <div class="goodnessseccont text-center">
+            <img src="/static/images/perf.png" class="img-responsive center-block" alt="">
+            <p class="mlkpro" style="margin-top: 40px;">Best Performance</p>
+        </div>
+    </a>
+</div>
+   
+</div>
+<div class="col-md-4 col-sm-3 mi-go wow fadeInup bg-white" data-wow-duration="1s" data-wow-dealy="0.6s" 
+style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+<div class="goodnesssec buttermilk smgb">
+    <a href="#">
+        <div class="goodnessseccont text-center">
+            <img src="/static/images/service.png" class="img-responsive center-block" alt="">
+            <p class="mlkpro" style="margin-top: 40px;">Best Service</p>
+        </div>
+    </a>
+</div>
+   
+</div>
+</div>
+<br><br><br>
+
+    
+  {% endblock information  %}  
+

@@ -1,0 +1,36 @@
+{% extends 'magasin/base.html' %}
+{% block main-content %}
+<div class="container shadow" style=" width: 71%;  margin-top: 20px; background-color: white; margin-bottom: 50px;">
+    <div class="row my-3">
+       <div class="col ">
+         <h3 style="margin-left: 280px; margin-right: 120px; margin-top: -140px;">Register</h3>
+         <br>
+         <form action="" method="post" style="margin-left: 80px; " novalidate class=" p-6">
+            {% csrf_token %}
+            {% for fm in form %}
+            <div style="padding-top: 30px; ">
+              {{fm.label_tag}} {{fm}} <small class="text-danger">{{fm.errors|striptags}}</small>
+              <br>
+            {% endfor %}
+            <input type="submit" value="Registre" style="margin-left: 200px; margin-top: 40px; margin-bottom: 40px;" class="btn btn-primary"> <br>
+            <div class="text-center text-primary fw-bold">
+                <small>Exisiting user ?<a href="{% url 'login' %}" class="text-danger">Login Now</a></small>
+            </div>
+            {% if form.non_field_errors %}
+              <p class="alert alert-danger my-3 ">{{form.non_field_errors|striptags}}</p>
+            {% endif %}  
+            {% if messages %}
+              {% for message in messages %}
+              <div class="alert alert-{{message.tags}}" role="alert">
+                {{message}}
+              </div>
+              {% endfor %}
+            {% endif %}
+         </form>
+       </div>
+    </div>
+    </div>
+</div>
+<br><br><br>
+
+{% endblock main-content %}

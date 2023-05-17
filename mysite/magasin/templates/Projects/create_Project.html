@@ -1,0 +1,11 @@
+{% extends 'magasin/base.html' %}
+{% block content %}
+<div style="padding: 70px;margin-top: 20px;" class=" text-center shadow">
+<form method='POST' class="post-form" style="margin-left: 40px; margin-bottom: 40px;" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-dark">Enregistrer</button>
+</form>
+</div>
+<br><br><br><br><br><br><br>
+{% endblock %}
